@@ -8,13 +8,19 @@ import { useState } from "react";
 function App() {
   const [inputData, setInputData] = useState(contactData);
 
-  const updateSearch = (event) => { 
-    if (event.target.value === "")
-    {setInputData(contactData)}
-    else {
-    setInputData(inputData.filter((element) => element.name.toLowerCase().includes(event.target.value.trim().toLowerCase())));}
+  const updateSearch = (event) => {
+    if (event.target.value === "") {
+      setInputData(contactData);
+    } else {
+      setInputData(
+        inputData.filter((element) =>
+          element.name
+            .toLowerCase()
+            .includes(event.target.value.trim().toLowerCase())
+        )
+      );
+    }
   };
-
 
   return (
     <>
