@@ -42,10 +42,7 @@ function ContactForm() {
             name="number"
           />
         </label>
-        <button
-          className={styles.button}
-          type="submit"
-        >
+        <button className={styles.button} type="submit">
           Add Contact
         </button>
       </form>

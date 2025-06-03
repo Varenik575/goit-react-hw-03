@@ -1,0 +1,32 @@
+.wrapper {
+    width: 228px;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding:8px 8px 8px 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.stylingBlock {
+    display: block;
+}
+
+.name {
+    display: inline-block;
+    margin-left: 8px;
+    max-width: 140px;
+    text-wrap: wrap;
+    word-wrap: normal;
+    word-break: normal;
+}
+
+.number {
+    display: inline-block;
+    margin-left: 8px;
+      max-width: 140px;
+    text-wrap: wrap;
+    word-wrap: normal;
+    word-break: normal;
+}
+

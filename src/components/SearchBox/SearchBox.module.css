@@ -1,1 +1,16 @@
+.wrapper {
+    width: fit-content;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding:8px 8px 8px 8px;
+    margin-bottom: 8px;
+}
 
+.titleText {
+    display: block;
+}
+
+.searchField {
+    display: block;
+    width: 220px;
+}
