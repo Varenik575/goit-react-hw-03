@@ -6,19 +6,21 @@ import contactData from "./contactData.json";
 import { useState } from "react";
 
 function App() {
-  const [inputData, setInputData] = useState(contactData);
+  const INITIAL_DATA = contactData;
+  const [inputData, setInputData] = useState(INITIAL_DATA);
 
   const updateSearch = (event) => {
     if (event.target.value === "") {
-      setInputData(contactData);
+      setInputData(INITIAL_DATA);
     } else {
       setInputData(
-        inputData.filter((element) =>
+        INITIAL_DATA.filter((element) =>
           element.name
             .toLowerCase()
             .includes(event.target.value.trim().toLowerCase())
         )
       );
+      console.log(event.target.value);
     }
   };
 
