@@ -7,7 +7,15 @@ import { useState } from "react";
 
 function App() {
   const INITIAL_DATA = contactData;
-  const [inputData, setInputData] = useState(INITIAL_DATA);
+  const [inputData, setInputData] = useState(() => {
+    const savedContacts = window.localStorage.getItem("saved-contacts");
+    if (savedContacts !== null) {
+      return JSON.parse(savedContacts);
+    } else {
+      window.localStorage.setItem("saved-contacts", JSON.stringify(INITIAL_DATA));
+      return JSON.parse(savedContacts);
+    }
+  });
 
   const updateSearch = (event) => {
     if (event.target.value === "") {
