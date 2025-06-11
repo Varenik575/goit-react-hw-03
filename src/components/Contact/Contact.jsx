@@ -2,7 +2,10 @@ import styles from "./Contact.module.css";
 import PhoneIcon from "../PhoneIcon/PhoneIcon";
 import UserIcon from "../UserIcon/UserIcon";
 
-function Contact({ name, number }) {
+function Contact({ name, number, id, onDelete}) {
+
+  
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.textBlock}>
@@ -17,7 +20,7 @@ function Contact({ name, number }) {
         </div>
       </div>
 
-      <button className={styles.button} type="button">
+      <button className={styles.button} onClick={() => onDelete(id)} type="button">
         Delete
       </button>
     </div>
